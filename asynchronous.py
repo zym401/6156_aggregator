@@ -5,7 +5,6 @@ import random
 
 async def fetch(url, session, index):
     # Introduce a random delay
-    await asyncio.sleep(random.uniform(0.1, 0.8))
     async with session.get(url) as response:
         data = await response.text()
         print(f"get response from microservice {index}")
